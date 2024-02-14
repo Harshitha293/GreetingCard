@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Flip with Centered Header</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair Display"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing Script"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="content">
+      <header>
+        <h1>Happy Valentine's Day to my wonderful husband!</h1>
+        <br />
+        <h3>
+          You mean the world to me, and I'm grateful for every moment we share
+          together. <br />
+          Here's to many more years of love and happiness.<br />
+          Hover over the greeting card below to see how much I love you !!!
+        </h3>
+      </header>
+
+      <div class="container">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front"></div>
+            <div class="card-back"></div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <h5>
+          Here is the small token of my love and appreciation for you..
+          <button id="openBtn"><img src="giftbox.png" /></button>
+          <div id="popup" class="popup">
+            <div class="popup-content">
+              <span class="closeBtn" id="closeBtn">&times;</span>
+              <h2>Boom!!!</h2>
+              <p>Check it out in your closet!!</p>
+            </div>
+          </div>
+        </h5>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("backdrop.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: blur(5px);
+  z-index: -1; /* Ensure the pseudo-element is behind other content */
+}
+
+h1 {
+  color: red;
+  padding: 50px 30px 2px 30px;
+  text-align: center;
+  font-family: "Lobster";
+}
+h3 {
+  color: black;
+  padding: 1px;
+  text-align: center;
+  font-family: "Sacramento";
+  font-size: 22px;
+}
+h5 {
+  color: black;
+  padding: 1px;
+  text-align: center;
+  font-family: "Dancing script";
+  font-size: 22px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(
+    100vh - 500px
+  ); /* Subtracting the header height from the viewport height */
+}
+
+.card {
+  width: 400px;
+  height: 278px;
+  perspective: 1000px; /* Define the perspective for 3D transforms */
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s; /* Apply transition effect for smooth animation */
+  transform-style: preserve-3d; /* Preserve 3D transforms */
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg); /* Rotate the card 180 degrees on hover */
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden; /* Hide the backface of the elements */
+}
+
+.card-front {
+  background-image: url("CardFront.png");
+}
+
+.card-back {
+  background-image: url("CardBack.png"); /* Back content background color */
+  transform: rotateY(
+    180deg
+  ); /* Initially rotate the back content 180 degrees */
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  background-color: rgb(235, 29, 39);
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#openBtn {
+    background-color: #a73c3c; /* Set the background color to red */
+    padding: 1px 1px; /* Add padding for better appearance */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+
+.popup-content {
+  text-align: center;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #888;
+}
+
+.closeBtn:hover {
+  color: #000000;
+}
+
+  
